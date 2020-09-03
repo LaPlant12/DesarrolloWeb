@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2</title>
+    <!--Internal-->
+    <style> 
+        body {background-color: rgb(138, 112, 144);}
+        h1 {color: rgb(114, 225, 209); background-color: black; text-align: center;
+        padding: 40px;
+        margin: 100px;}
+    </style>
+
+    <!--External-->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 id="C1">CSS</h1>
+    <p>Hay 3 formas de usar CSS: <br>
+        <b>Inline: </b>adentro de elementos html usando <mark>atributo</mark> style <br>
+        <b>Internal: </b>adentro de head usando <mark>elemento</mark> style <br>
+        <b>External: </b>usando el elemento link que agregue un documento CSS (más usado)
+    </p>
+    <h1>Links</h1>
+    <p>Target:</p>
+    <a href="index.html" target="_self">_self(default)</a> <br>
+    <a href="index.html" target="_blank">_blank</a> <br>
+    <a href="index.html" target="_parent">_parent</a> <br>
+    <a href="index.html" target="_top">_top</a>
+    <br>
+
+    <h2>Imagen Link</h2>
+    <a href="mierda.jpg" target="_blank" title="Imposible...">
+        <img src="mierda.jpg" alt="foto de wey" width="100" height="150" style="border-radius: 30px;">
+    </a>
+    <a href="mailto:david.garcia.leon.12@gmail.com">mairu?</a>
+    
+    <p>Botón CSS</p>
+    <a href="https://steamuserimages-a.akamaihd.net/ugc/862851251564185746/88FB17EA52B030C8980A8247342E0C2D4862CCAE/"
+    style="background-color: blueviolet; 
+            color: white;
+            padding: 15px 25px; 
+            text-decoration: none;"
+            target="_blank">opiode</a>
+
+    <h2>Bookmarks</h2>
+    <p>esto es útil</p>
+    <a href="#C1">ir a CSS</a>
+
+    <h1>Imágenes</h1>
+    <p>Se puede usar el atributo style y ponerle width y height o también utilizar atributos width y height por separados <br>
+    de preferencia usa style, y siempre define el tamaño de la imagen </p>
+    <img src="GatoSistemoso.gif" alt="GatoSistemoso" style="width: 384; height: 480px;">
+    <p>imagen de otro servidor: </p>
+    <img src="https://steamuserimages-a.akamaihd.net/ugc/862851251564185746/88FB17EA52B030C8980A8247342E0C2D4862CCAE/" alt="Me gusta esta foto">
+    
+    <h2>float: </h2>
+    <p> <img src="https://i.pinimg.com/originals/98/70/bb/9870bb35ba3e9c8edc023d94e039217c.gif" alt="gato" style="float: left; width: 145; height: 183;">
+    text texto, la imagen se va a ir a la izquierda o derecha del texto, según lo especifique la propiedad float, upss no salió bien </p>
+
+    <h2 style="font-family: sans-serif;">Image map</h2>
+
+    <img src="panamiguel.png" alt="pana Miguel" usemap="#mapana">
+
+    <map name="mapana">
+        <area shape="rect" coords="116,39,303,154" href="https://www.google.com/search?sxsrf=ALeKk01zhT48mtiBUFZnjNX7KluWoNdjxg%3A1593637840343&source=hp&ei=0Pv8Xq3aEZDusQXSm7iAAw&q=jeta&oq=jeta&gs_lcp=CgZwc3ktYWIQAzIFCAAQkQIyBAgAEEMyBAgAEEMyBAgAEEMyBAgAEEMyBAgAEEMyAggAMgIIADICCAAyAggAOgcIIxDqAhAnOgQIIxAnUMIGWN0JYOQMaABwAHgAgAHwAYgB9gaSAQUwLjEuM5gBAKABAaoBB2d3cy13aXqwAQo&sclient=psy-ab&ved=0ahUKEwitgvzK-6zqAhUQd6wKHdINDjAQ4dUDCAY&uact=5" alt="jeta" title="jeta">
+        <area shape="rect" coords="88,303,295,381" onmouseover="myFunction()">
+    </map>
+
+    <script>
+        function myFunction()
+        {
+            for(i=1; i<=3;i++)
+            {
+                if (i==1) 
+                alert("patas a la "+i+"!");
+                else
+                alert("patas a las "+i+"!");
+            }
+        }
+    </script>
+
+    <a href="3.html">Siguiente</a>
+</body>
+</html>

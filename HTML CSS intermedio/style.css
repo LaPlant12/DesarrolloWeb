@@ -1,0 +1,247 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    padding-bottom: 20px;
+}
+
+body{
+    background-image:url(HotCake.png);
+    background-repeat: repeat-x;
+    background-position: bottom;
+    background-size: 60px;
+    background-attachment: relative;
+    background-color: rgb(208, 254, 245);
+}
+
+ul.barra{
+    background-color: rgb(74, 5, 28);
+    overflow: hidden;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline;
+    opacity: 1;
+    z-index: +1;
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+li.barra{
+    float: left;
+    text-align: center;
+    padding: 15px;
+    text-align: center;
+    font-size: 90%;
+    color: white;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+li.barra:hover{
+    background-color: rgb(122, 12, 49);
+    cursor: pointer;
+}
+
+.active{
+    background-color: rgb(122, 12, 49);
+}
+
+/*Dropdowns*/
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    min-width: 130px;
+    background-color: rgb(82, 255, 184);
+    box-shadow: 0px 0px 10px 0px black;
+    padding: 10px;
+    text-align: center;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+
+/*Dropdown menu*/
+.dropbtn{
+    background-color: rgb(249, 233, 0);
+    color: black;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.dropdown-content a{
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+}
+
+h1,h2,h3,h4,p{
+    width: 80%;
+    margin: auto;
+}
+
+h1{
+    background-color: rgb(250, 178, 234);
+    border-radius: 30px;
+    text-align: center;
+    font-size: 200%;
+    font-weight: 400px;
+}
+
+div.border{
+    width: 80%;
+    margin: auto;
+    border: 3px solid rgb(131, 33, 97);
+    padding: 20px;
+    border-radius: 10px;
+
+    box-sizing: border-box; /*No permite que el padding se le sume al width*/
+}
+
+div.outline{
+    border: 1px solid rgb(82, 255, 184);
+    outline-width: 6px;
+    outline-style: dotted;
+    outline-color: rgb(82, 255, 184);
+    outline-offset: 3px;
+    text-align: center;
+    width: 80%;
+    margin: auto;
+}
+
+.texto{
+    margin: auto;
+    text-align: center;
+    color: rgb(131, 10, 72);
+    font-size: 30px;
+
+    vertical-align: top; 
+    text-transform: uppercase;
+    text-indent: 50px;
+    letter-spacing: 3px;
+    line-height: 1.8;
+    word-spacing: -5px;
+
+    text-shadow: 2px 1px rgb(249, 233, 0);
+
+    font-style: italic;
+    font-weight: bold;
+}
+
+table,th,td{
+    border-bottom:2px solid black;
+    border-collapse: collapse;
+}
+
+table{
+    width: 70%;
+    margin: auto;
+}
+
+td{
+    vertical-align: bottom;
+    padding: 4px;
+}
+
+th{
+    background-color: rgb(249, 233, 0);
+    padding: 3px;
+    text-align: left;
+}
+
+tr:hover{
+    background-color: rgb(149, 209, 197);
+}
+
+div.boton:hover{
+    background-color: rgb(62, 133, 103);
+    cursor: pointer;
+}
+
+div.boton{
+    padding: 10px;
+    margin: auto; 
+    background-color: rgb(82, 255, 184);
+    border-radius: 14px; 
+    text-align: center; 
+    width: 70px;
+}
+
+div.boton::selection{
+    background-color: rgb(62, 133, 103);
+    text-emphasis: none;
+    text-decoration: none;
+}
+
+/*Position*/
+div.relative{
+    position: relative;
+}
+div.textoabsoluto{
+    position: absolute;
+    color: black;
+    top: 50%;
+    left: 25%;
+    font-size: 50px;
+}
+
+/*pseudo elementos*/
+::selection{
+    color: rgb(82, 255, 184);
+    background-color: black;
+}
+
+input[type=text]{
+    background-color: rgb(82, 255, 184);
+    color: black;
+    transition: 0.5s;
+    border-style: none;
+    display: block;
+    margin: auto;
+    padding: 10px;
+    -webkit-transition: 0.5s;
+    border-radius: 10px;
+}
+
+input[type=text]:focus{
+    border: 3px solid rgb(70, 167, 126);
+}
+
+@keyframes ejemplo1{
+    from{width: 150px;}
+    to{width: 250px;}
+}
+
+@keyframes ejemplo2{
+    from{width: 250px}
+    to{width: 150px}
+}
+
+div.animacion:hover{
+    animation-name: ejemplo1;
+    animation-duration: 1.5s;
+}
+div.animacion:{
+    animation-name: ejemplo2;
+    animation-duration: 1.5s;
+}
+div.animacion:hover p{
+    display: block;
+}
+p.animacion{
+    display: none;
+}

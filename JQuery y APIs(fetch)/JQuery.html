@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dropdown.css">
+    <script src="https://kit.fontawesome.com/cbe8592060.js" crossorigin="anonymous"></script>
+
+    <!-- jquery -->
+    <script src="jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+          $(".dropdown").mouseenter(function(){
+            $(".dropdown-content").slideDown(300);
+            $("#flecha").css("transform","rotate(180deg)");
+          });
+        });
+
+        $(document).ready(function(){
+          $(".dropdown").mouseleave(function(){
+            $(".dropdown-content").slideUp(300);
+            $("#flecha").css("transform","rotate(0deg)");
+          });
+        });
+
+        //aside
+        $(document).ready(function(){
+          $("#playeras").click(function(){
+            $("#playeras-content").slideToggle(300);
+          });
+        });
+
+        $(document).ready(function(){
+          $("#barras").mouseenter(function(){
+            $("#aside").animate({
+              width : "25%"
+            });
+          });
+        });
+
+        $(document).ready(function(){
+          $("#aside").mouseleave(function(){
+            $("#aside").animate({
+              width : "0%"
+            });
+          });
+        });
+
+        // $(document).ready(function(){
+        //   $(".ropa").mouseenter(function(){
+        //     $(".ropa").animate({
+
+        //     });
+        //   });
+        // });
+
+    </script>
+</head>
+<body>
+    <ul class="navbar">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#news">News</a></li>
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropbtn"> <i class="fas fa-sort-down" id="flecha"></i> Dropdown</a>
+          <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
+        </li>
+        <li id="barras" style="float: right; color: black; text-align: center; padding: 14px 14px 0px 0px; font-size: 1.3em; cursor: pointer;"><i class="fas fa-bars"></i></li>
+      </ul>
+
+    <div class="flex-container">
+      <div id="flex-item1">
+        <div id="playeras"><i class="fas fa-sort-down"></i> &nbsp Playeras</div>
+        <div id="playeras-content">
+          <ul>
+            <li>Chicos</li>
+            <li>Chicas</li>
+          </ul>
+        </div>
+        <div id="playeras"><i class="fas fa-sort-down"></i> &nbsp Playeras</div>
+      </div>
+
+      <div id="flex-item2">Contenido</div>
+      <div id="flex-item3">Contenido</div>
+    </div>
+
+    <aside id="aside">
+      <p class="ropa"><a href="PaolaChulota.jpg">WOMAN</a></p>
+      <p class="ropa"><a href="#">MAN</a></p>
+      <p class="ropa"><a href="#">KIDS</a></p>
+      <p class="ropa"><a href="#">SHOES&BAGS</a></p>
+    </aside>
+
+    <script>
+      //Aquí abriremos una conexión HTML con un documento JSON con las pelis de Ghibli
+      var request = new XMLHttpRequest();
+      request.open("GET", "https://ghibliapi.herokuapp.com/films", true)
+
+      // if(request.status >= 200 && request.status < 400){
+          request.onload = function(){
+          //aquí se accesa a ese rollo
+          var data = JSON.parse(request.response);
+          
+          var l = data.length; 
+          for(let i = 0; i < l; i++){
+            console.log(data[i].title);
+          }
+        }
+      // } else{
+      //   console.log("error")
+      // }
+
+      request.send();
+
+      //Ahora con fetch
+      /*Okey, solo para explicar un poquito de forma resumida cómo está el pedo aquí:
+        
+        método fetch con url regresa un objeto Promise, que se usa para procesar requests asíncronas,
+        esto quiere decir que puede o no recibir información, en caso de que si, se procesa la información
+        recibida con el método .then (Promise.then(), aquí el Promise es fetch)
+        .then recibe un objeto Response (puede ser representado con cualquier nombre, en este caso "respuesta")
+        el cual como su nombre lo dice contiene la información que queremos, en este caso está en json, para eso
+        usamos ese método(respuesta.json()) para procesar la información en objetos de JS, pero upssss resulta que
+        Response a su vez hereda (creo) a Promise, entonces también necesita de su método .then para ser procesado
+        en este caso ponemos .then que tiene como parámetro una función (la puse con arrow function, es casi lo mismo) 
+        con lo que ya ya ya es la informacion en objetos de JS (datos), para procesarlos, en este caso datos representa
+        un arreglo de las 20 películas del maestro hayaomi, queremos el directos de la película 0, director es una propiedad
+        del objeto y ya está!
+        .catch procesa el error (aquí representado como error para que veas que no tiene que ser un nombre en específico
+        , tardé en entender eso jaja) y puede ponerlo en el log
+        Listo! gracias internet c:
+
+        oh si, otra cosa, Response tiene un método llamado status() que regresa el código que dice si se aceptó o no
+        la request (200 si si 400 o 404 si no), puedes hacer una validación si te crees muy vergas jaja
+        */
+      fetch("https://ghibliapi.herokuapp.com/films")
+
+        .then(function(respuesta){
+          respuesta.json().then(datos => console.log(datos[0].director));
+        })
+      
+        .catch(function(err){
+          console.log("Ups, pasó algo: ", err);
+        })
+    </script>
+</body>
+</html>

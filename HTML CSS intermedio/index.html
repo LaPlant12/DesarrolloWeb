@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet"> 
+    
+    
+
+    <title>CSS Prueba</title>
+
+    <style>
+        body{
+            font-family: Nunito Sans;
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/cbe8592060.js" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+    <ul class="barra" style="height: 50px;">
+        <li class="barra active"><a href="#home"> <i class="fas fa-home"></i>    Página Principal</a></li>
+        <li class="barra"><a href="#Productos"> <i class="fas fa-shopping-bag"></i>  Productos</a></li>
+        <li class="barra"><a href="#contacto"> <i class="fas fa-users"></i> Nosotros</a></li>
+        <li class="barra dropdown">
+            <a href="dropbtn">Dropdown</a>
+            <div class="dropdown-content">
+                <a href="#">link</a>
+                <a href="#">link</a>
+                <a href="#">link</a>
+            </div>
+        </li>
+    </ul>
+    <br> <br>
+    <h1 style="width: 100%;  padding:10px; border-radius: 0; margin: 0px; border: 0px;">CSS</h1>
+    <br>
+
+    <div class="border">Esto tiene un margin que lo centra automaticamente en medio con auto
+        ,si ponemos un poco más de texto se puede ver que en efecto eres joto
+    </div>
+    
+    <br><br>
+    <div class="outline">Esto tiene outline y si te acercas más puedes ver los pixeles jaja</div> <br> <br>
+    <p class="texto">este texto originalmente está en minúsculas</p>
+    <div style="text-align: center; width: 400px; margin: auto;"><i class="fas fa-dharmachakra fa-spin" style="font-size: 50px; color: black;"></i></div>
+    <br>
+    
+    <div style="overflow-x: auto;">
+        <table>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Edad</th>
+                <th>Otros</th>
+            </tr>
+            <tr>
+                <td>Davod</td>
+                <td>Garcia</td>
+                <td>19</td>
+                <td>Sabe karate</td>
+            </tr>
+            <tr>
+                <td>Kayne</td>
+                <td>Becil</td>
+                <td>33</td>
+                <td>No sabe karate</td>
+            </tr>
+        </table>
+    </div>
+    <br>
+   
+    
+    <form action="" style="text-align: center;">
+    <input type="password" name="password" id="password" style="padding: 20px; box-sizing: border-box; width: 100px; height: 10px; border-radius: 20px; border: 3px solid pink; background-color: black; color: wheat; margin:auto" maxlength="4" placeholder="PIN">
+    </form>
+
+    <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/849430-center-3" alt="chosto" 
+    style="max-width: 100%; height: 200px; display: block; margin: auto;" id="chosto" ite>
+
+    <div class="boton" onclick="desaparecer()" id="boton1">On/off</div>
+    <script>
+        var i = 2;
+        function desaparecer(){
+            var x = document.getElementById("chosto");
+
+            if(i%2 == 0)
+                x.style.visibility= "hidden" ;
+            else
+                x.style.visibility= "visible";
+
+            i++;
+        }
+    </script>
+    <br>
+
+    <div class="relative" style="height: 900px;">
+        <div style="height: inherit; background-color: rgb(131, 33, 97);">
+            <img src="https://heypcguy.com/wp-content/uploads/2015/03/shutterstock_166727513.jpg" srcset="https://images.pexels.com/photos/4318999/pexels-photo-4318999.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940 2x" alt="niga" style="width: 100%; opacity: 0.7;">
+        </div>
+        <div class="textoabsoluto texto">Aquí hacemos páginas</div>
+    </div>
+    <br>
+
+    <div style="position: relative; left: 50px; margin-right: 50px;">relative</div>
+    <div style="position: static; left: 50px;">static</div>
+    <br>
+    <div style="width: 200px; height: 100px; overflow:scroll; margin:auto">
+        Aquí podemos poner mucho texto el cual al usar la propiedad
+        de overflow se decide lo que se hace si se sobrepasa de el width
+        y height especificados djkalksdnkajsndka jsndkjansdkjanskjdnakjsdn
+        caca
+    </div> <br> <br>
+    <div class="animacion" style="margin: auto; width: 150px; background-color: blueviolet; border-radius: 10px; text-align: center; padding: 4px;">
+        Me adelanto un poco
+    <p class="animacion">Hola</p>
+    </div>
+    <br><br>
+    <div style="background-color: rgb(249, 233, 0,0.5); text-align: center; padding: 5px; font-size: 20px;">Transparencia con rgb</div>
+    <br>
+
+    <div class="dropdown" style="margin: auto; width: 100px; text-align: center;">Holaaa
+        <div class="dropdown-content">
+            Puto
+        </div>
+        <br><br>
+    </div>
+
+    <div class="dropdown"> hi
+        <div class="dropdown-content">
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+        </div>
+    </div> <br>
+    <form action="#">
+        <input type="text" name="texto" id="texto" placeholder="Search"> 
+    </form>
+    <br>
+
+    <a href="ejercicio.html" style="float: right; width: 300px;">siguiente</a>
+
+    <h1>Contenido interactivo</h1>
+    <details>
+        <summary>interactivo<summary>
+        <p>Hola, esto es interacivo sin JS</p>
+    </details>
+
+    <dialog open style="float: right;">
+        <h2>Caca</h2>
+        <p>Informacion</p>
+    </dialog>
+
+    
+</body>
+</html>

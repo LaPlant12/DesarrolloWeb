@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3</title>
+    <style>
+        body{
+            background-image: url(GatoSistemoso.gif);
+            background-size: cover;
+            background-attachment: fixed;
+            font-family: rubik;
+        }
+
+        h1{
+           background-color: rgb(135, 255, 101);
+           border-radius: 17px;
+           text-align: center; 
+           font-family: rubik;
+        }
+
+        h2{
+            text-align: center;
+            color: darkorange;
+            text-decoration: 3px underline;
+        }
+
+        @font-face {
+            font-family: rubik;
+            src: url(Rubik-Regular.ttf);
+        }
+
+        table, th, td{
+            border: 2px solid black;
+            border-collapse: collapse;
+            background-color: rgb(156, 255, 250);
+            text-align: left;
+            border-spacing: 5px;
+        }
+
+        td{
+            padding: 3px;
+            
+        }
+
+        #T1{
+            
+            float: left; 
+            list-style-type: none; 
+            margin: 30px;
+            display: block;
+        }
+
+        #T1:hover{
+            background-color: aqua;
+            margin: 30px;
+        }
+
+        ul,ol,p{
+            color: white;
+            font-size: 20px;
+        } 
+        
+    </style>
+</head>
+<body>
+    <h1>Tables</h1>
+    <table style="width: 100%;" id="T1">
+        <caption>Tabla de putos</caption>
+        <tr>
+            <th>Nombre</th>
+            <th>Detalles</th>
+            <th>Precio</th>
+            <th colspan="2">Numeros</th>
+        </tr>
+        <tr>
+            <td rowspan="2">David</td>
+            <td>Mexicano</td>
+            <td>1000</td>
+            <td>456345</td>
+            <td>445345</td>
+        </tr>
+        <tr>
+            <td>Becil</td>
+            <td>20</td>
+            <td>3234342</td>
+            <td>3243234</td>
+        </tr>
+    </table>
+<br>
+<br>
+    <h1>Lists</h1>
+    <p style="text-align: center;">Unordered y ordered</p>
+    <ul style="float: left; list-style-type: square;">
+        <li>Café</li>
+        <li>Pan francés</li>
+        <li>Salsa</li>
+        <ul>
+            <li>Chile</li>
+            <li>Tomate</li>
+            <li>Cebolla</li>
+        </ul>    
+    </ul>
+    <ol style="float: right;">
+        <li>Despertar</li>
+        <li>Cafeína</li>
+        <li>Comer</li>
+        <li>Cagar</li>
+    </ol>
+    <br>
+    <br>
+    <p style="text-align: center; color: lightcyan">Description lists</p>
+    <dl style="text-align: center; color: lightcyan;">
+        <dt>Café</dt>
+        <dd>Bebida negra, generalmente caliente y adictiva</dd>
+        <dt>Leche</dt>
+        <dd>No deberíamos de tomarla</dd>
+    </dl>
+
+
+    <p>Horizontal:</p>
+    <ul style="background-color: aquamarine; overflow: hidden; color: black">
+        <li id="T1">caca</li>
+        <li id="T1">caca</li>
+        <li id="T1">caca</li>
+    </ul>
+
+    <ol type="I">
+        <li>atributo</li>
+        <li>type, define</li>
+        <li>el tipo</li>
+        <li>valgame</li>
+    </ol>
+
+    <h1>Elementos block e inline</h1>
+    <p>los elementos Block ocupan el mayor espacio de ancho posible (div) como p</p>
+    <div style="border: 2px solid black;">Hola, soy un div</div>
+    <br>
+    <p>los elementos Inline ocupan solo el espacio necesario que abarcan (span) como a</p>
+    <span style="border: 2px solid black;"> Hola soy un span</span>
+    <h2>Div</h2>
+    <p>el elemento div se usa como un contenedor para otros elementos:</p>
+
+    <div style="background-color: rgb(203, 156, 242); color: darkorange; padding: 20px;">
+        <h3>La cafeína</h3>
+        <p>Es buena, es muy nutritiva y poderosísima, así como el américa</p>
+    </div>
+
+    <h2>Span</h2>
+    <p>Contenedor inline usado para marcar parte de un texto o documento:</p> <br>
+    
+    <p>"A veces se me genera caldo de <span style="text-decoration: bold; color: brown;">culo</span>
+        pero se me quita comiendo <span style="text-decoration: 2px underline burlywood; color:rgb(233, 119, 20);">melón</span>"
+    </p>
+    
+    <a href="4.html">Sigamos...</a>
+</body>
+</html>

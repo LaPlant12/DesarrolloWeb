@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Culera</title>
+
+    
+    <link rel="stylesheet" href="ejercicio.css">
+    <link rel="shortcut icon" href="https://assets.petco.com/petco/image/upload/f_auto,q_auto/849430-center-3" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/cbe8592060.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+
+    <script>
+        var i = 2;
+        function nav(){
+            var x = document.getElementById("barra");
+
+            if(i%2 == 0){
+                x.style.display= "block";
+                x.style.opacity= "1"
+                x.style.transition = "display 1s, opacity 1.5s "
+            }
+            else
+                x.style.display= "none";
+
+            i++;
+        }
+        
+       var x = setInterval(reloj,1000);
+
+        function reloj(){
+            var d = new Date();
+            document.getElementById("clock").innerHTML = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <i class="fas fa-bars" onclick="nav()"></i>
+        <span style="font-size: 40px; text-align: center; margin: 0px; padding: 0px;">Hola</span>
+        <div id="clock" style="text-align: right; background-color: black; color: white; display: inline-block; float: right; padding: 10px;">r</div>
+    </header>
+
+    <ul class="navbar" style="z-index: 2;">
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Descarga</a></li>
+        <li><a href="#">Productos</a></li>
+        <li class="dropdown">
+            <a href="#" class="dropbtn">Cosas</a>
+            <div class="dropdown-content" style="z-index: 1;">
+                <a href="#">Cosa1</a>
+                <a href="#">Cosa2</a>
+                <a href="#">Cosa3</a>
+            </div>
+        </li>
+    </ul>
+
+    <div>
+        <img src="https://images.pexels.com/photos/2425251/pexels-photo-2425251.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="otakus" style="max-width: 100%; position: relative; height: auto;">
+        
+        <h2 class="textoimagen">Esto es una página, hola</h2>
+        
+    </div>
+
+    <div class="flex-container">
+        <div class="flex-component1">
+            <h2>Acerca de moi</h2>
+            <ul>
+                <li><a href="#">Caca</a></li>
+                <li><a href="#">Caca</a></li>
+                <li><a href="#">Caca</a></li>
+            </ul>
+            <p>Mi compa:</p>
+            <blockquote class="twitter-tweet" data-theme="dark"><p lang="en" dir="ltr">I don’t know what’s going on with my look today haha <a href="https://t.co/jawKNQ9bLJ">pic.twitter.com/jawKNQ9bLJ</a></p>&mdash; MACROXX 82-99 (@MACROSS8299) <a href="https://twitter.com/MACROSS8299/status/1285313834102784001?ref_src=twsrc%5Etfw">July 20, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+        </div>
+
+        <div class="flex-component2">
+            <h2>Los chostitos</h2>
+            <p>Los cerdos de guinea están bien chidotes jaja caca
+                caca caca caca caca caca
+            </p>
+            <img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/849430-center-3" alt="chosto" style="max-width: 100%;">
+        </div>
+
+        <div class="flex-component3"> 
+            <h2>Quéjate, chillón</h2>
+            <p>Mándanos una queja</p> <br>
+                <form action="#">
+                <label for="usuario">Usuario</label><br>
+                <input type="text" name="usuario" id="usuario"> <br> <br>
+
+                <label for="correo">Correo</label> <br>
+                <input type="text" name="correo" id="correo"> <br> <br>
+
+                <textarea name="textarea" id="text" cols="30" rows="10" placeholder="u queja" style="width: 92%;"></textarea>
+            </form>
+        </div>
+    </div>
+
+    <div class="flex-container">
+        <div class="flex-component4">
+            <h1 style="background-color: yellow; color: black; width: 40%; margin: auto;">Javascript, ahora si</h1>
+            <p id="p1">Lo siguiente lo haremos con JS</p>   <br>
+            <strong>Primitivos: </strong>   <p id="p2"></p> <br>
+            <strong>Complejos: </strong>    <p id="p3"></p> <br>
+            <br>
+            <button onclick="mostrarFecha(this)">Fecha</button>
+            <button onclick="window.print()">Imprimir esta página</button>
+
+            <h2>String methods</h2> <br>
+            <p id="demo"></p>
+            <p id="demo1"></p>
+            <p id="demo2"></p>
+            <p id="demo3"></p>
+
+            <h2>Arrays</h2>
+            <p id="demo4"></p>
+            <p id="demo5"></p> 
+            <p id="demo6"></p> 
+            <p id="demo7"></p> 
+            <p id="demo8"></p>
+
+            <h2>Objetos</h2>
+            <p id="demo9"></p> 
+            <p id="demo10"></p>  
+
+            <h2>DOM</h2>
+            <p id="demoDOM1"></p>
+            <p id="demoDOM2"></p>
+            <p id="demoDOM3"></p>
+            <p id="demoDOM4"></p>
+
+            <button onclick="movimiento()">Picale</button>
+            <div id="container">
+                <div id="animate"></div>
+            </div>
+            <br>
+            <div id="transform">Hola</div>
+            <br>
+            <div class="corazon"></div>
+
+            <!-- scripts al final de body, eh? buena práctica -->
+            <script>
+                "use strict"; //A huevo tienes que declarar variables, que bonito
+                document.getElementById("p1").innerHTML = "Este texto se escribió en JS, suma: "+ (5+6);
+                console.log(5+6);
+
+                // Tipos de datos (son dinámicos)
+                    //Primitivos
+                var number = 11.11;
+                var string = "\"Niga\"";   //Ojo, aquí string es primitivo
+                var boolean = true;
+                var un;         //Esta expresión
+                un = undefined; //y esta tienen el mismo valor: undefined   
+
+                    //Complejos (No primitivos) son solo objetos y funciones (array es un objeto por supuesto)
+                var objeto = {nombre:"Kayne", apellido:"Becil", edad:50, dinero:"poco"};
+                var arreglo = [40,50,55,34,23,"kayne",objeto,"Los arrays en js pueden tener varios tipos de datos, hasta funciones y arrays"]; 
+                var nulo = null;
+                function funcion(){};
+
+                document.getElementById("p2").innerHTML = typeof number + " " + typeof string + " " + typeof boolean + " " + typeof un;
+                document.getElementById("p3").innerHTML = typeof objeto + " " + typeof arreglo + " " + typeof funcion + "\t" + nulo; 
+                // null es un objeto :0
+                
+                //sigamos en documento script.js
+                // ...mejor no
+
+                                                    //String methods
+                var texto = "Hola, ando bien capiroteado, soy iron man";
+
+                var longitud = texto.length; //Como en java
+                var posicion = texto.indexOf("iron"); //te va a dar la poscion de el inicio de "iron", -1 si no se encuentra
+                posicion = texto.search("iron"); //es lo mismo, solo que search puede usar regex y no admite segundo párametro
+
+                document.getElementById("demo").innerHTML = "Encontrar iron en: " + texto + " y reemplazarlo";
+                document.getElementById("demo1").innerHTML = "Posicion donde empieza "+ texto.slice(posicion, posicion+4) +": " + posicion;
+                document.getElementById("demo2").innerHTML = texto.replace(/iRoN/i, "Joto"); //regex /i lo vuelve case insensitive
+                                                    //Array methods
+                //Convertir strings en un array
+                document.getElementById("demo3").innerHTML = stringArray("caca,pipi,naco,joto,bebesitabebelin", 1);
+                
+                var demo3 = document.getElementById("demo3").innerHTML + " " + Number("11.11");
+                document.getElementById("demo3").innerHTML = demo3;
+
+                document.getElementById("demo4").innerHTML = "Primero le ponemos 'otro elemento' al array con push"+ arreglo.push("otro elemento") +"<br> <strong>recorrer Array: </strong> <br>" + mostrarArray(arreglo);
+                //quitar y poner valores
+                arreglo.shift();
+                arreglo.unshift("Nuevo valor inicial");
+
+                arreglo.pop();
+                arreglo.push("Nuevo valor final");
+
+                arreglo.splice(4, 3, "E1", "E2"); //en la posición 4, se quitan 2 elementos y se ponen "E1" y "E2"
+                document.getElementById("demo5").innerHTML = "Quitamos el \
+                primero y el segundo elemento y los reemplazamos, también añadimos nuevos elementos: <br>" + arreglo.toString(); +"<br> <br>";
+                //sort
+                var numeros = [1,100,23,24,45,50];
+                document.getElementById("demo6").innerHTML = "Para hacer un ordenamiento alfabético se usa el método sort(), pero para números es diferente: <br>"
+                + numeros;
+                numeros.sort(function(a,b){return a - b});
+                document.getElementById("demo7").innerHTML = numeros.toString();
+                //Random
+                document.getElementById("demo8").innerHTML = "Para obtener números enteros aleatorios: <br>" + Math.floor(Math.random() * 101)
+                //Ternary operator(if else reducido) : variable = (condición) ? valor1:valor2
+                //Break se sale del loop y Continue se pasa a la siguiente iteración
+
+                //RegEx
+                var a = "hola hoy comemos CaRnE";
+                var index = a.search(/carne/i);
+                a.replace(/carne/i, "frutas");
+
+                //Try catch requiere el objeto err como parámetro de catch, este tiene dos propiedades: mensaje y nombre
+                try{
+                    soyUnError = "Soy un error porque estoy en strict mode y no me declararon :P";
+                }
+                catch(err){
+                    alert(err.message);
+                }
+
+                var persona = {
+                    nombre:"Kayne",
+                    apellido: "Becil",
+                    id: 12345,
+                    nombreCompleto: function(){
+                        return this.nombre + " " + this.apellido;
+                    }
+                }
+
+                //let y const se usan para hacer variables y constantes con un block scope
+                //es decir, que solo se pueden usar en un determinado bloque {} ej.dropdown
+
+                var x = 6;
+                var z = 3
+                {
+                    let x = 2;
+                    console.log(x); //esto va a dar 2
+                    //let se suele usar para ciclos:
+                    var i = 2
+                    for(let i = 0; i<6; i++){
+                        console.log(i);
+                    }
+                    //aqui i vale 2
+
+                    const z = 66;
+                    //const z = 77;
+                    //esto te da un error no puedes VOLVER A ASIGNAR un const por eso el try
+                    //pero si cambiar o poner valores si es un objeto ej:
+                    const obj = {nombreCarro:"MX5", color:"Rojo", cilindros:"4"}
+                    obj.color = "morado";
+                    obj.rendimiento = "15kml";
+                }
+
+                console.log(x); //Esto va a dar 6
+
+                var x = objeto;
+                x.edad = 20; //tanto para objeto como para x, su edad es ahora 20
+
+                //for loop
+                var texto = ""
+                for(i in objeto){
+                    texto += objeto[i] + ", ";
+                }
+
+                //añadir un nuevo método a un objeto
+                objeto.nombreCompleto = function(){
+                    return objeto.nombre + " " + objeto.apellido;
+                }
+
+                document.getElementById("demo9").innerHTML = texto + objeto.nombreCompleto();
+                
+                //Convertir objeto a Array? (que pedo, pinche javascript)
+                var arregloObjeto = Object.values(objeto);
+                //Usar JSON para convertir objeto a String
+                var demo10 = document.getElementById("demo10");
+                demo10.innerHTML = JSON.stringify(objeto); 
+
+                //Si, hay getters y setters, estan raros
+                var cerdoDeGuinea = {
+                    nombre : "chostito",
+                    edad : "Sepa",
+                    
+                    get nom(){
+                        return this.nombre;
+                    },
+
+                    get ed(){
+                        return this.edad;
+                    },
+
+                    set nom(n){
+                        this.nombre = n;
+                    },
+
+                    set ed(e){
+                        this.edad = e;
+                    }
+                }
+
+                cerdoDeGuinea.ed = 10;
+                cerdoDeGuinea.edad = 15; 
+                cerdoDeGuinea.chosticomida= "chostichurros";
+                //ambos funcionan, supongo que es lo de encapsulamiento, arono, no se pueden declarar las propiedades como privadas, tho
+                demo10.innerHTML +=cerdoDeGuinea.nom + cerdoDeGuinea.ed + cerdoDeGuinea.chosticomida + "<br>";
+
+                //Constructores!
+                function Chostito(nombre, edad){
+                    this.nombre = nombre;
+                    this.edad = edad;
+                }
+
+                var cerdo = new Chostito("cuyo",14);
+                var cerdo2 = new Chostito("cuyi", 18);
+                //se pueden añadir métodos y propiedades a objetos como siempre, pero no a constructores...
+                //a no ser que uses .prototype
+                Chostito.prototype.comida = "chostichurros"
+
+                demo10.innerHTML += "Hola soy "+ cerdo.nombre+ " y tengo " +cerdo.edad+" años y me gustan los "+ cerdo.comida +"<br>";
+                demo10.innerHTML += "Hola soy "+ cerdo2.nombre+ " y tengo " +cerdo2.edad+" años <br>";
+
+                //A partir de 2015, ES permitió la creación de clases y todo lo necesario para hacer proper objetos
+
+                                    //call()
+                var persona = {
+                    datosCompletos : function(ciudad, pais){
+                        return this.nombre +" "+ this.apellido + " de "+pais+", "+ ciudad;
+                    }
+                };
+
+                var persona1 = {nombre:"Jacob", apellido: "Colita"};
+                var persona2 = {nombre:"Kanye", apellido: "West"};
+
+                console.log(persona.datosCompletos.call(persona1, "Londres", "Inglamierda"));
+                console.log(persona.datosCompletos.call(persona2, "Wondjsjeshire", "Merica"));
+
+                            //DOM
+                document.getElementById("demoDOM1")
+
+                //animación con JS:
+                function movimiento(){
+                    var elemento = document.getElementById("animate");
+                    var posicion = 0;
+                    var ciclo = setInterval(frame, 5);
+
+                    function frame(){
+                        if(posicion == 350){
+                            clearInterval();
+                        }
+                        else{
+                            posicion++;
+                            elemento.style.top = posicion + "px";
+                            elemento.style.left = posicion + "px";
+                        }
+                    }
+                }
+            </script>
+        </div>
+    </div>
+
+    <footer>
+        <h1>Bai</h1>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--keywords para los search engines-->
+    <meta name="keywords" content="HTML, CSS, Pagina web fea del batillo, basura, jaja">
+    <meta name="description" content="Pagina fea para aprender HTML">
+    <meta name="author" content="Batillo">
+    <!--Refresh cada 30 segundos-->
+    <meta http-equiv="refresh" content="30">
+    <!--base hace referencia a la URL base de todos los documentos-->
+    <!--base href="/home/laplant/IDEs/Proyectos/HTML/Prueba"-->
+
+    <title>4</title>
+
+    <style>
+        @font-face {
+            font-family: rubik;
+            src: url(Rubik-Regular.ttf);
+        }
+        body{
+            font-family: rubik;
+            background-color: rgb(255, 243, 240);
+            text-align: center;
+        }
+
+        h1{
+            background-color: rgb(253, 225, 45);
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        h2{
+            background-color: rgb(244, 135, 182);
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        p{
+            color: rgb(204, 89, 210);
+        }
+
+        
+        .city{
+            background-color:rgb(244, 135, 182);
+            color: white;
+            border: 2px solid violet;
+            border-radius: 40px;
+            text-align: center;
+        }
+
+        .bordecul{
+            border-radius: 40px;
+            text-align: end ;
+        }
+
+        .denotar{
+            font-size: 130%;
+            font-stretch: expanded;
+            color:aqua;
+            background-color: black;
+
+        }
+
+        a:hover{
+            color:rgb(204, 89, 210);
+            text-decoration: none;
+        }
+
+        a{
+            color:salmon;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .boton{
+            float: right; 
+            background-color: rgb(204, 89, 210); 
+            border-radius: 3px; 
+            color: white; 
+            padding: 10px;
+        }
+        
+        .boton:hover{
+            background-color:rgb(144, 70, 207);
+            cursor:pointer;
+        }
+
+        .boton::selection{
+            background-color:inherit;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Class</h1>
+    <p>Se usa class para crear una especie de clase con atributos de CSS para usarlo con elementos html. <br>
+        un elemento puede usar varias class separadas por espacios, los elementos con una class pueden ser accedidos y modificados con JS.
+    </p>
+
+    <div class="city">
+        <h2>CDMX</h2>
+        <p style="color: white;">CDMX es gigante y ahí vive el peje</p>
+    </div>
+
+    <p class="city bordecul">En Torreón el calor destruye tinacos</p>
+
+    <p>Me <span class="denotar">encantaría</span> conocer más al respecto</p>
+    <br>
+    <p>la diferencia entre class y id es que id se usa solo una vez <br>
+    oh, también se puede hacer esto:</p>
+    <a href="2.html#C1">Regresar a C1</a>
+    <br>
+
+    <h1>iframe</h1>
+    <iframe src="https://www.w3schools.com/html/html_responsive.asp" title="Inicio" style="width:100%; height: 300px; border:2px solid rgb(144, 70, 207)"></iframe>
+    <p style="float: right;"> que loco, no?</p>
+    <br>
+    <h1>JavaScript</h1>
+    <p>JS es el lenguaje para la web, agrega funcionalidad muy chingona, lo estudiaremos más adelante pero por mientras hay que saber un poquillo: </p>
+    <h2>Elemento script</h2>
+
+    <span  id="demo">Texto wuwu</span>
+    <p onclick="miFuncion()" class="boton" style="text-align: center;">Botón</p>
+    <noscript>Upsss que cagado, tu navegador no vale cola :p</noscript>
+    <script>
+        var e = 0;
+        function miFuncion(){
+            e++;
+            if(e % 2 == 0)
+            document.getElementById("demo").style.fontSize = "150%";
+            else
+            document.getElementById("demo").style.fontSize = "100%"
+        }
+    </script>
+    <br> <br> <br> <br>
+    <h1>Frameworks para CSS</h1>
+    <a href="https://www.w3schools.com/w3css/default.asp">W3.CSS</a> <br>
+    <a href="https://www.w3schools.com/bootstrap/default.asp">Bootstrap</a>
+
+    <h1>Responsive Web Design</h1>
+    <ul style="list-style-type: square;">
+        <li>Usar meta name viewport para que se ajuste al dispositivo</li>
+        <li>Usar width 100% si se quiere ocupar todo el width del dispositivo</li>
+        <li>Usar max-width 100% al definir width de elementos que quieres que ocupen el width del dispositivo sin pasarse del tamaño máximo de la imagen</li>
+        <li>Elemento picture y source para definir ciertas imágenes que irán apareciendo dependiendo del ancho del dispositivo</li>
+        <li>Media queries (lo vemos pronto)</li>
+        <li style="font-size: 2vw;">Para hacer texto responsivo utiliza unidad vw (viewport width) en lugar de px, intenta hacer resize de la página viendo este texto</li>
+    </ul>
+    <br>
+    <h1>Otras cosas</h1>
+    <p>Entities, por ejemplo greater than(&gt) o less than(&lt) o amp (&amp;), &quot;, &apos;, &hearts;</p>
+    <p>Emojis: &#128512; &#128516; &#128525; &#128151;</p>
+    <br><br>
+
+    <h1>Forms</h1>
+    <p>Los forms se envian a páginas con servidores que procesan los datos (PHP) en el atributo action</p>
+    <form action="" method="GET">
+        <fieldset>
+            <legend>Persona</legend>
+            <label for="texto">Nombre</label><br>
+            <input type="text" id="texto" value="Kayne" name="nombre"> <br>
+            
+            <label for="gei">Gay?</label>
+            <input type="radio" id="gei" name="gay"> <br>
+
+            <label for="select">Seleccione su carro</label>
+            <select name="carros" id="select" multiple>
+                <option value="MX5">MX5</option>
+                <option value="Tesla">Tesla</option>
+                <option value="Lobo">Lobo</option>
+                <option value="Pildora">Pildorilla</option>
+            </select> <br> <br>
+
+            <textarea name="textarea" id="area" cols="30" rows="10" style="width: 300px; height: 200px;">Bio</textarea> <br>
+            <input type="button" onclick="alert('AAAAA')" name="boton" value="Botón!">
+            <input type="submit" id="ok" name="enviar" value="Enviar"> <br>
+
+            <input list="navegadores">
+            <datalist id="navegadores">
+                <option value="Firecocks"></option>
+                <option value="IE"></option>
+                <option value="Chrome"></option>
+                <option value="Safari"></option>
+            </datalist>
+
+            <input type="color" name="color" id="color">
+            <input type="date" name="date" id="date">
+            <input type="file" name="file" id="file" value="select file">
+            <input type="search" name="search" id="search"> <br>
+            
+            <label for="PIN">PIN</label>
+            <input type="text" name="PIN" id="PIN" maxlength="4" size="2" placeholder="3421" required>
+        </fieldset>
+    </form>
+
+    <!--<h1>Graphics</h1>
+    <canvas id="cavascul" width="300" height="200" style="border:2px solid rgb(204, 89, 210); float: left;" onclick="circulo()">
+    </canvas>
+
+    <script>
+        function circulo(){
+            var c = document.getElementById("canvascul");
+            var ctx = c.getContext("2d");
+            ctx.beginPath();
+            ctx.arc(95,50,20,0,2*Math.PI);
+            ctx.stroke();
+        }
+    </script> -->
+
+    <h1>Media</h1>
+    <h2>Video</h2>
+    <video src="videoYo.mp4" controls max-width="100%" height="400px"></video><br>
+    <audio src="doit.mp3" controls></audio> <br>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/ARUQ4zWrLeI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</body>
+</html>
