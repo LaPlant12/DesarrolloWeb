@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Oswaldo',sans-serif;
+    background-color: lightblue;
+}
+
+#cositadearriba{
+    text-align: center;
+    font-size: 2em;
+    background-color: lightpink;
+    color: black;
+    font-style: italic;
+    word-spacing: .3em;
+    font-weight: bold;
+    padding: .25em;
+}
+
+#flex-container{
+    display: flex;
+    /* background-color: black; */
+    max-width: 100%;
+    flex-wrap: wrap;
+    height: 400px;
+    margin: 14px;
+}
+
+.flex-component{
+    display: flex;
+    color: rgb(97, 96, 96);
+    border: 2px solid rgb(97, 96, 96);
+    flex-grow: 1;
+    border-radius: 14px;
+    padding: 15px;
+    font-size: 1.2em;
+    margin: 15px;
+    text-align: center;
+}
+
+.flex-component h2{
+    text-align: center;
+}
+
+@media screen and (max-width: 700px){
+
+    #flex-container{
+        flex-direction: column;
+    }
+}
+
+
+

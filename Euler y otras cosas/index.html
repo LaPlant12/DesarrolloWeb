@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problemas</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div id="cositadearriba">
+        Problemas de Euler
+    </div>
+
+    <div id="flex-container">
+        <div id="flex-component1" class="flex-component">
+            <h2>Problema 1</h2> <br>
+            <p id="p1"></p>
+        </div>
+
+        <div id="flex-component2" class="flex-component">
+            <h2>Problema 2</h2> <br>
+        </div>
+    </div>
+
+    <script>
+        var cosa = {nombre:"Kayne", apellido:"Becil"};
+        var x = cosa;
+
+        cosa = 2;
+
+        document.getElementById("p1").innerHTML = x.nombre + cosa;
+
+    </script>
+</body>
+</html>
